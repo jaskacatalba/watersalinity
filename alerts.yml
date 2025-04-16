@@ -2,9 +2,25 @@ groups:
   - name: water-salinity-alerts
     rules:
       - alert: HighErrorRate
-        expr: rate(http_requests_total{status_code=~"5.."}[5m]) > 0.05
-        for: 2m
+        expr: rate(http_requests_total{status_code=~"5.."}[1m]) > 0.01  # Trigger on a smaller threshold for easier demonstration
+        for: 30s  # Make it shorter for testing
         labels:
           severity: critical
         annotations:
-          summary: "High 5xx error rate"
+          summary: "High 5xx error rate detected"
+
+      - alert: HighRequestLatency
+        expr: http_request_duration_seconds_sum{job="water-salinity-app"} / http_request_duration_seconds_count{job="water-salinity-app"} > 0.5  # Latency alert for requests > 0.5s
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High request latency"
+          
+      - alert: ServiceDown
+        expr: up{job="water-salinity-app"} == 0  # Service is down if no metrics are collected
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Water Salinity Application is down!"

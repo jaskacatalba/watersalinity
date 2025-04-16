@@ -62,6 +62,7 @@ app.use("/api/unowned-wells-clean", unownedWellsCleanRoutes);
 app.use("/api/contaminated-wells-unowned", contaminatedWellsUnownedRoutes);
 app.use("/api/wells", wellRoutes);
 
+// ── EMAIL ROUTE ─────────────────────────────────────────────────────────────
 app.post("/api/send-email", async (req, res) => {
   const { recipientEmail, userName } = req.body;
   try {
@@ -73,6 +74,12 @@ app.post("/api/send-email", async (req, res) => {
   }
 });
 
+// ── SIMULATED 500 ERROR ROUTE (FOR PROMETHEUS TESTING) ──────────────────────
+app.get("/fail", (req, res) => {
+  res.status(500).send("Simulated 500 error for Prometheus alert testing");
+});
+
+// ── ERROR HANDLER ────────────────────────────────────────────────────────────
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
