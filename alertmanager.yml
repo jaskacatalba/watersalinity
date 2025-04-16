@@ -1,0 +1,13 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'jaskacatalba454@gmail.com'
+  smtp_auth_username: 'jaskacatalba454.com'
+  smtp_auth_password: 'ikfr hpcr wbte grhp'
+
+route:
+  receiver: 'gmail'
+
+receivers:
+  - name: 'gmail'
+    email_configs:
+      - to: 'jaskacatalba454@gmail.com'

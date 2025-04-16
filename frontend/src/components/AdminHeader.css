@@ -1,0 +1,188 @@
+.image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Header */
+.header {
+  background-color: royalblue;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+/* Logo Container and Title */
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+.header__title {
+  width: 50px;
+  height: 35px;
+  margin-right: 10px;
+  font-family: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/* Link and Active Link */
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px;
+  display: block;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+@media (max-width: 768px) {
+  .link {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+.activeLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px;
+  display: block;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+@media (max-width: 768px) {
+  .activeLink {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* Logout */
+.logout {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  padding: 8px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .logout {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Dropdown Content */
+.dropdownContent {
+  position: absolute;
+  background-color: royalblue;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .dropdownContent {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Sub-Dropdown */
+.subDropdown {
+  position: relative;
+}
+
+/* Sub-Dropdown Content */
+.subDropdownContent {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: royalblue;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .subDropdownContent {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* NEW: Dropdown Toggle Button Styling */
+.dropdownToggle {
+  background-color: royalblue; /* Same as header background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: background 0.3s;
+  outline: none;
+}
+
+.dropdownToggle:hover,
+.dropdownToggle:focus,
+.dropdownToggle:active {
+  background-color: dodgerblue !important;
+  color: white !important;
+  outline: none !important;
+  border: none !important;
+}

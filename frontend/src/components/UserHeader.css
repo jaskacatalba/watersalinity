@@ -1,0 +1,148 @@
+/* UserHeader.css */
+
+/* Header container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366; /* dark blue background */
+    padding: 10px 20px;
+  }
+  
+  /* Logo + Title */
+  .header__logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo-container .image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .header__title {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  /* Navigation links */
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Top-level nav link */
+  .nav .link {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px; /* Increase if you want bigger text for top-level links */
+  }
+  
+  /* Active nav link styling */
+  .nav .activeLink {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown toggle button */
+  .dropdownToggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* bigger toggle text */
+    margin: 0 10px;
+  }
+  
+  /* 
+     Dropdown content has a DARK background 
+     and WHITE text by default, so items 
+     look "invisible" until hovered.
+  */
+  .dropdownContent {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003366; /* dark background */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 5px 0;
+    /* no color needed here because we will set it on the items themselves */
+  }
+  
+  /* Each municipality item in the dropdown */
+  .subDropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Sub-dropdown content (barangays) also dark background, white text */
+  .subDropdownContent {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #003366; /* dark background */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 5px 0;
+  }
+  
+  /* 
+     Links and spans in the dropdown 
+     => WHITE text, bigger font 
+  */
+  .dropdownContent a,
+  .dropdownContent span,
+  .subDropdownContent a,
+  .subDropdownContent span {
+    display: block;
+    padding: 8px 12px; /* a bit more padding for bigger font */
+    font-size: 16px;  /* or 18px if you want it larger */
+    color: #fff;      /* white text on dark background */
+    text-decoration: none;
+  }
+  
+  /* 
+     Hover effect on dropdown items:
+     => background becomes white, text becomes black
+  */
+  .dropdownContent a:hover,
+  .dropdownContent span:hover,
+  .subDropdownContent a:hover,
+  .subDropdownContent span:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* 
+     SubDropdown hover highlight (optional).
+     This changes the entire row's background
+     when hovering a municipality (not required
+     if you prefer only the text link to highlight).
+  */
+  .subDropdown:hover {
+    background-color: #00264d; /* slightly darker than #003366 */
+  }
+  
+  /* Logout button */
+  .logout {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* match the bigger font style */
+  }
+  

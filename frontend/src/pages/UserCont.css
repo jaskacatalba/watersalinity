@@ -1,0 +1,127 @@
+/* Centers and constrains overall width */
+.container {
+    max-width: 1200px; /* adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333;               /* Default text color */
+  }
+  
+  /* Chart Section: side-by-side on larger screens */
+  .chartSection {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-bottom: 20px;
+    justify-content: space-between; /* Distributes space between chart boxes */
+  }
+  
+  /* Each chart is treated like a card */
+  .chartBox {
+    flex: 1;
+    min-width: 300px; /* Ensures chart won't shrink too small */
+    max-width: 550px; /* Prevents it from growing too wide */
+    padding: 20px;
+    background-color: #fff; /* Card background */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight card shadow */
+  }
+  
+  /* Chart Titles */
+  .chartTitle {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  /* Smaller subtitle or description text */
+  .chartDescription {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Form/card for adding data */
+  .inputSection {
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional heading inside the input section */
+  .inputSection h2 {
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  /* Styling for text/number inputs */
+  .input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed or remove to let inputs fill width */
+  }
+  
+  /* Button style (blue primary) */
+  .button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Bootstrap-like primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  
+  /* Table container card */
+  .tableSection {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Basic table styling */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Table header row with a consistent background color */
+  .table thead {
+    background-color: #007bff; /* Matches button color */
+    color: #fff;
+  }
+  
+  /* Table header cells */
+  .th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Table body cells */
+  .td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Footer styling (optional) */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

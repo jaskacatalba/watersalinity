@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72vh;
+  }
+  
+  .card {
+    width: 350px;
+    padding: 20px;
+    background-color: royalblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .title {
+    font-family: auto;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .input {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .forgotPassword {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .loginBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .loginBtn:hover {
+    background-color: navy;
+  }
+  

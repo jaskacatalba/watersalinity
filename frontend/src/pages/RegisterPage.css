@@ -1,0 +1,174 @@
+.reg-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* If you have a global background image, omit it here.
+     Otherwise, you could do:
+     background: url("/path/to/your/image.jpg") no-repeat center center/cover; */
+}
+
+.reg-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 50px;
+}
+
+.reg-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reg-header img {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.reg-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.reg-header p {
+  font-size: 16px;
+  color: #4a5568;
+  margin: 0;
+}
+
+.error {
+  color: #e53e3e;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Two-column grid for the form fields */
+.reg-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.input:focus {
+  border-color: #3182ce;
+}
+
+/* "Create Account" button */
+.reg-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3182ce;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.reg-button:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-1px);
+}
+
+/* Link to login */
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link .link {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link .link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .reg-form-grid {
+    grid-template-columns: 1fr; /* single column on smaller devices */
+  }
+
+  .reg-card {
+    padding: 30px 20px;
+  }
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content styles */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Login button inside modal */
+.modal-content .login-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.modal-content .login-button:hover {
+  background: #2b6cb0;
+}
